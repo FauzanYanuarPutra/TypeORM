@@ -1,0 +1,26 @@
+{
+   "name": "crud-be",
+   "version": "0.0.1",
+   "description": "Awesome project developed with TypeORM.",
+   "type": "commonjs",
+   "devDependencies": {
+      "@types/express": "^4.17.18",
+      "@types/node": "^20.7.0",
+      "ts-node": "^10.9.1",
+      "typescript": "^5.2.2"
+   },
+   "dependencies": {
+      "express": "^4.18.2",
+      "joi": "^17.10.2",
+      "nodemon": "^3.0.1",
+      "pg": "^8.11.3",
+      "reflect-metadata": "^0.1.13",
+      "typeorm": "^0.3.17"
+   },
+   "scripts": {
+      "start": "nodemon --exec ts-node src/index.ts",
+      "typeorm": "typeorm-ts-node-commonjs",
+      "migration:generate": "npx typeorm-ts-node-commonjs migration:generate src/migration/MyMigration -d src/data-source.ts",
+      "migration:run": "npx typeorm-ts-node-commonjs migration:run -d src/data-source.ts"
+   }
+}
